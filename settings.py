@@ -1,3 +1,3 @@
 # non-secret configuration
-DATABASE_URL = '/tmp/flaskr.db'
+DATABASE = '/tmp/flaskr.db'
 DEBUG = True
