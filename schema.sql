@@ -1,7 +1,6 @@
--- sqlite 2 here, so no "if exists" or "autoincrement"
-drop table students;
+drop table if exists students;
 create table students (
-  id integer primary key,
+  id integer primary key autoincrement,
   name text not null,
-  class text not null
+  klass text not null
 );
