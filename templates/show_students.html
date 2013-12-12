@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_student') }}" method=post class=add-student>
+      <dl>
+        <dt>Student:
+        <dd><input type=text size=30 name=title>
+        <dt>Class:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+        <dd><input type=submit value=Add>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=students>
+  {% for student in students %}
+    <li><h2>{{ student.title }}</h2>{{ student.text|safe }}
+  {% else %}
+    <li><em>Unbelievable. No students here so far.</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
