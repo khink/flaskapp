@@ -1,3 +1,3 @@
 # non-secret configuration
-DATABASE = '/tmp/flaskr.db'
+DATABASE = '/tmp/flaskapp.db'
 DEBUG = True
